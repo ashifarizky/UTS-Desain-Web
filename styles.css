@@ -1,0 +1,237 @@
+/* Simple Biodata Design - Basic HTML/CSS */
+
+/* Example of @import (external stylesheet import). Uncomment to use an extra stylesheet: */
+/* @import url('extras.css'); */
+
+/* Reset and Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f8ff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e6f3ff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 2px solid #b3d9ff;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar-wrapper {
+    position: relative;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    object-fit: cover;
+}
+
+.status-indicator {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    background-color: #28a745;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.role {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.card-header h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+/* Personal Info */
+.info-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.info-item {
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.info-item:hover {
+    background-color: #f8f9fa;
+}
+
+.label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.value {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Timeline */
+.timeline {
+    /* Timeline visuals hidden: vertical line and markers removed */
+    position: relative;
+    padding-left: 0;
+}
+
+.timeline::before {
+    display: none;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    display: none;
+}
+
+.timeline-dot.active {
+    display: none;
+}
+
+.timeline-content h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.institution {
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.period {
+    font-size: 12px;
+    color: white;
+    background-color: #007bff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
